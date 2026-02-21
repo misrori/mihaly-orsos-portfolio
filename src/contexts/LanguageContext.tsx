@@ -23,10 +23,11 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.downloadCV": "CV letöltése",
 
     // Hero
+    "hero.badge": "Elérhető oktatásra & konzultációra",
     "hero.greeting": "Szia, én vagyok",
     "hero.name": "Orsós Mihály",
-    "hero.title": "Data Scientist & Oktató",
-    "hero.subtitle": "Databricks Certified Instructor • AI & Data Engineering • Python & R szakértő",
+    "hero.title": "Data Scientist & Databricks Instructor",
+    "hero.subtitle": "Adat-vezérelt megoldásokat építek, tőzsdei algoritmusokat fejlesztek, és a következő generáció programozóit képzem. Hivatalos Databricks oktató, AI rajongó és vízi sportos.",
     "hero.cta": "Ismerd meg a munkáimat",
 
     // About
@@ -112,10 +113,11 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.intro": "Intro",
     "nav.downloadCV": "Download CV",
 
+    "hero.badge": "Available for training & consulting",
     "hero.greeting": "Hi, I'm",
     "hero.name": "Mihály Orsós",
-    "hero.title": "Data Scientist & Instructor",
-    "hero.subtitle": "Databricks Certified Instructor • AI & Data Engineering • Python & R Expert",
+    "hero.title": "Data Scientist & Databricks Instructor",
+    "hero.subtitle": "I build data-driven solutions, develop trading algorithms, and train the next generation of programmers. Official Databricks instructor, AI enthusiast, and water sports lover.",
     "hero.cta": "Explore my work",
 
     "about.title": "About Me",
