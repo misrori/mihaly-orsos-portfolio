@@ -1,74 +1,82 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowDown, Github, Linkedin, Mail, ChevronRight } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profileCutout from "@/assets/profile-cutout.png";
 
 const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-background">
-      {/* Subtle gradient overlay */}
+    <section className="relative min-h-screen overflow-hidden bg-background">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
 
-      <div className="container relative z-10 px-6">
-        <div className="relative flex min-h-[80vh] items-end pb-16 lg:items-center lg:pb-0">
+      <div className="container relative z-10 mx-auto px-6 pt-24">
+        <div className="relative grid min-h-[85vh] grid-cols-1 items-center lg:grid-cols-12">
           
-          {/* Large name in the background */}
+          {/* Large name in the background - spans full width behind everything */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 z-0 select-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="pointer-events-none absolute inset-0 flex items-center justify-start select-none overflow-hidden"
           >
-            <h1 className="text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11rem] xl:text-[13rem] font-bold leading-[0.85] tracking-tight text-foreground/10">
+            <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] font-bold leading-[0.85] tracking-tight text-foreground/[0.07]">
               {t("hero.name").split(" ").map((word, i) => (
                 <span key={i} className="block">{word}</span>
               ))}
             </h1>
           </motion.div>
 
-          {/* Profile photo - large, no circle, overlapping the text */}
+          {/* Profile photo - centered, large, no circle */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 lg:left-[30%] lg:-translate-x-1/2"
+            className="relative z-10 flex items-end justify-center lg:col-span-5 lg:col-start-2"
           >
-            <img
-              src={profilePhoto}
-              alt="Mihály Orsós"
-              className="h-[28rem] sm:h-[34rem] lg:h-[40rem] w-auto object-cover object-top drop-shadow-2xl"
-            />
-            {/* Gradient fade at the bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+            <div className="relative">
+              <img
+                src={profileCutout}
+                alt="Mihály Orsós"
+                className="h-[24rem] sm:h-[30rem] lg:h-[36rem] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+              />
+            </div>
           </motion.div>
 
-          {/* Text content - positioned to the right */}
-          <div className="relative z-20 ml-auto w-full lg:w-[45%] lg:pl-8">
+          {/* Text content - right side */}
+          <div className="relative z-20 lg:col-span-5 lg:col-start-7">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl"
+            >
+              {t("hero.name")}
+            </motion.h2>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-2 font-mono text-xs uppercase tracking-widest text-primary"
+              className="mb-4 text-lg font-medium text-gradient-gold"
             >
               {t("hero.title")}
             </motion.p>
 
-            <motion.h2
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mb-4 text-2xl font-bold leading-snug text-foreground sm:text-3xl"
+              className="mb-8 max-w-md text-sm leading-relaxed text-muted-foreground"
             >
               {t("hero.subtitle")}
-            </motion.h2>
+            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="mb-6 flex flex-wrap items-center gap-4"
+              className="flex flex-wrap items-center gap-4"
             >
               <a
                 href="#projects"
