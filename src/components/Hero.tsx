@@ -7,105 +7,92 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-background">
+      {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
 
       <div className="container relative z-10 px-6">
-        {/* Name as large background text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.06 }}
-          transition={{ duration: 1 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-center"
-        >
-          <span className="whitespace-nowrap font-bold text-foreground text-[8rem] sm:text-[12rem] lg:text-[16rem] leading-none select-none">
-            {t("hero.name")}
-          </span>
-        </motion.div>
-
-        <div className="relative flex flex-col items-center text-center">
-          {/* Profile photo - prominent, no background */}
+        <div className="relative flex min-h-[80vh] items-end pb-16 lg:items-center lg:pb-0">
+          
+          {/* Large name in the background */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-            className="mb-8"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 z-0 select-none"
           >
-            <div className="relative">
-              <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-primary/15 to-transparent blur-2xl" />
-              <img
-                src={profilePhoto}
-                alt="Mihály Orsós"
-                className="relative h-56 w-56 rounded-full border-4 border-primary/20 object-cover shadow-2xl sm:h-72 sm:w-72 lg:h-80 lg:w-80"
-              />
-            </div>
+            <h1 className="text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11rem] xl:text-[13rem] font-bold leading-[0.85] tracking-tight text-foreground/10">
+              {t("hero.name").split(" ").map((word, i) => (
+                <span key={i} className="block">{word}</span>
+              ))}
+            </h1>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-          >
-            {t("hero.name")}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mb-4 text-xl font-medium text-gradient-gold sm:text-2xl"
-          >
-            {t("hero.title")}
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground"
-          >
-            {t("hero.subtitle")}
-          </motion.p>
-
+          {/* Profile photo - large, no circle, overlapping the text */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-wrap items-center justify-center gap-4"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 lg:left-[30%] lg:-translate-x-1/2"
           >
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
+            <img
+              src={profilePhoto}
+              alt="Mihály Orsós"
+              className="h-[28rem] sm:h-[34rem] lg:h-[40rem] w-auto object-cover object-top drop-shadow-2xl"
+            />
+            {/* Gradient fade at the bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+          </motion.div>
+
+          {/* Text content - positioned to the right */}
+          <div className="relative z-20 ml-auto w-full lg:w-[45%] lg:pl-8">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-2 font-mono text-xs uppercase tracking-widest text-primary"
             >
-              {t("hero.cta")}
-              <ChevronRight size={16} />
-            </a>
-            <div className="flex items-center gap-3">
+              {t("hero.title")}
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mb-4 text-2xl font-bold leading-snug text-foreground sm:text-3xl"
+            >
+              {t("hero.subtitle")}
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mb-6 flex flex-wrap items-center gap-4"
+            >
               <a
-                href="https://github.com/misrori"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-border p-3 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
+                href="#projects"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
               >
-                <Github size={18} />
+                {t("hero.cta")}
+                <ChevronRight size={16} />
               </a>
-              <a
-                href="https://www.linkedin.com/in/orsosmihaly/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-border p-3 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="mailto:ormraat.pte@gmail.com"
-                className="rounded-full border border-border p-3 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
-              >
-                <Mail size={18} />
-              </a>
-            </div>
-          </motion.div>
+              <div className="flex items-center gap-3">
+                <a href="https://github.com/misrori" target="_blank" rel="noopener noreferrer"
+                  className="rounded-full border border-border p-2.5 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary">
+                  <Github size={16} />
+                </a>
+                <a href="https://www.linkedin.com/in/orsosmihaly/" target="_blank" rel="noopener noreferrer"
+                  className="rounded-full border border-border p-2.5 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary">
+                  <Linkedin size={16} />
+                </a>
+                <a href="mailto:ormraat.pte@gmail.com"
+                  className="rounded-full border border-border p-2.5 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary">
+                  <Mail size={16} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
         <motion.a
@@ -113,7 +100,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}
-          className="mt-12 flex justify-center animate-bounce text-muted-foreground lg:mt-16"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground"
         >
           <ArrowDown size={24} />
         </motion.a>
