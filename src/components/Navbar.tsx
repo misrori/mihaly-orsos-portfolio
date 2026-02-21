@@ -31,7 +31,7 @@ const Navbar = () => {
           <a
             href="/Curriculum_Vitae_Mihaly_Orsos.pdf"
             download
-            className="flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
             <Download size={14} />
             {t("nav.downloadCV")}
