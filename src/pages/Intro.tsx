@@ -24,7 +24,7 @@ const Intro = () => {
       title: t("intro.slide2.title"),
       content: (
         <div className="flex flex-col gap-6 text-left">
-          {["item1", "item2", "item3"].map((key) => (
+          {["item1", "item2", "item3", "item4"].map((key) => (
             <motion.p
               key={key}
               initial={{ opacity: 0, x: -20 }}
@@ -42,7 +42,7 @@ const Intro = () => {
       title: t("intro.slide3.title"),
       content: (
         <div className="flex flex-col gap-6 text-left">
-          {["item1", "item2", "item3"].map((key) => (
+          {["item1", "item2", "item3", "item4"].map((key) => (
             <motion.p
               key={key}
               initial={{ opacity: 0, x: -20 }}

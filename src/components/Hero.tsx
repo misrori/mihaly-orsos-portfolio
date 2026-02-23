@@ -11,34 +11,19 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
 
       <div className="container relative z-10 px-6">
-        {/* Name as large background text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.06 }}
-          transition={{ duration: 1 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-center"
-        >
-          <span className="whitespace-nowrap font-bold text-foreground text-[8rem] sm:text-[12rem] lg:text-[16rem] leading-none select-none">
-            {t("hero.name")}
-          </span>
-        </motion.div>
-
         <div className="relative flex flex-col items-center text-center">
-          {/* Profile photo - prominent, no background */}
+          {/* Profile photo - no circle background, just white border, bigger */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
             className="mb-8"
           >
-            <div className="relative">
-              <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-primary/15 to-transparent blur-2xl" />
-              <img
-                src={profilePhoto}
-                alt="Mihály Orsós"
-                className="relative h-56 w-56 rounded-full border-4 border-primary/20 object-cover shadow-2xl sm:h-72 sm:w-72 lg:h-80 lg:w-80"
-              />
-            </div>
+            <img
+              src={profilePhoto}
+              alt="Mihály Orsós"
+              className="relative h-64 w-64 rounded-full border-4 border-white/30 object-cover shadow-2xl sm:h-80 sm:w-80 lg:h-96 lg:w-96"
+            />
           </motion.div>
 
           <motion.h1
@@ -99,7 +84,7 @@ const Hero = () => {
                 <Linkedin size={18} />
               </a>
               <a
-                href="mailto:ormraat.pte@gmail.com"
+                href="mailto:goldhand@goldhand.space"
                 className="rounded-full border border-border p-3 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
               >
                 <Mail size={18} />

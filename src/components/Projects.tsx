@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ExternalLink, TrendingUp, Plane, HelpCircle, Newspaper } from "lucide-react";
+import { ExternalLink, TrendingUp, Plane, HelpCircle, Newspaper, Youtube, Podcast } from "lucide-react";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -10,6 +10,8 @@ const Projects = () => {
     { key: "felhok", icon: Plane, url: "https://felhok.hu", tag: "Travel" },
     { key: "quiz", icon: HelpCircle, url: "https://quiz.goldhand.space", tag: "Education" },
     { key: "news", icon: Newspaper, url: "https://news.goldhand.space", tag: "AI & News" },
+    { key: "youtube", icon: Youtube, url: "https://www.youtube.com/@goldhandfinance", tag: "YouTube" },
+    { key: "podcast", icon: Podcast, url: "https://open.spotify.com/show/4vYHW2unj3heoa34nbHmIj", tag: "Podcast" },
   ];
 
   return (

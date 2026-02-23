@@ -42,9 +42,18 @@ const Charity = () => {
             >
               {t("charity.feny.link")} <ExternalLink size={14} />
             </a>
-            {/* YouTube placeholder */}
-            <div className="mt-4 flex h-40 items-center justify-center rounded-lg border border-border bg-secondary text-sm text-muted-foreground">
-              📺 YouTube videó helye
+            {/* YouTube video */}
+            <div className="mt-4 overflow-hidden rounded-lg">
+              <iframe
+                width="100%"
+                height="200"
+                src="https://www.youtube.com/embed/l-rXRCe9RMs"
+                title="Fényhúzók"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg"
+              />
             </div>
           </motion.div>
 
@@ -65,14 +74,26 @@ const Charity = () => {
             <p className="mb-4 text-sm leading-relaxed text-secondary-foreground">
               {t("charity.ukraine.desc")}
             </p>
-            {/* Article links placeholder */}
+            {/* Article links */}
             <div className="space-y-2">
-              <div className="rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-muted-foreground">
-                📰 Cikk #1 – placeholder
-              </div>
-              <div className="rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-muted-foreground">
-                📰 Cikk #2 – placeholder
-              </div>
+              <a
+                href="https://qubit.hu/2022/07/22/van-koztuk-aki-a-sajat-nevet-sem-ismeri-fel-leirva-de-mar-robotot-programoznak"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
+              >
+                📰 Qubit.hu – „Van köztük, aki a saját nevét sem ismeri fel leírva, de már robotot programoznak"
+                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
+              </a>
+              <a
+                href="https://wmn.hu/ugy/58074-az-oroszoknak-tul-ukranok-vagyunk-az-ukranoknak-tul-magyarok-a-magyaroknak-tul-ciganyok--civil-akcioban-segiti-egy-maltai-alapitvany-az-ukran-menekult"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
+              >
+                📰 WMN.hu – „Az oroszoknak túl ukránok vagyunk..."
+                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
+              </a>
             </div>
           </motion.div>
         </div>
