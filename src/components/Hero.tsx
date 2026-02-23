@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowDown, Github, Linkedin, Mail, ChevronRight } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -22,7 +22,7 @@ const Hero = () => {
             <img
               src={profilePhoto}
               alt="Mihály Orsós"
-              className="relative h-64 w-64 rounded-full border-4 border-white/30 object-cover shadow-2xl sm:h-80 sm:w-80 lg:h-96 lg:w-96"
+              className="relative h-64 w-auto object-contain drop-shadow-2xl sm:h-80 lg:h-96"
             />
           </motion.div>
 
@@ -30,7 +30,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+            className="mb-3 text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
           >
             {t("hero.name")}
           </motion.h1>
@@ -39,7 +39,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mb-4 text-xl font-medium text-gradient-gold sm:text-2xl"
+            className="mb-4 text-2xl font-medium text-gradient-gold sm:text-3xl"
           >
             {t("hero.title")}
           </motion.p>
@@ -48,7 +48,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground"
+            className="mb-8 max-w-xl text-lg leading-relaxed text-muted-foreground"
           >
             {t("hero.subtitle")}
           </motion.p>
