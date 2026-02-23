@@ -35,25 +35,41 @@ const Charity = () => {
               {t("charity.feny.desc")}
             </p>
             <a
-              href="https://fényhúzókalapítvány.hu"
+              href="https://www.fenyhozokalapitvany.hu"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-opacity hover:opacity-80"
             >
               {t("charity.feny.link")} <ExternalLink size={14} />
             </a>
-            {/* YouTube video */}
-            <div className="mt-4 overflow-hidden rounded-lg">
-              <iframe
-                width="100%"
-                height="200"
-                src="https://www.youtube.com/embed/l-rXRCe9RMs"
-                title="Fényhúzók"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-              />
+            <div className="mt-4 space-y-2">
+              <a
+                href="https://www.youtube.com/watch?v=l-rXRCe9RMs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
+              >
+                🎥 Fényhúzók – Bemutatóvideó
+                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=ASU5NwAgj0Y"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
+              >
+                🎥 Fényhúzók – Videó 2
+                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=VQoJknN4yfs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
+              >
+                🎥 Fényhúzók – Videó 3
+                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
+              </a>
             </div>
           </motion.div>
 
@@ -77,21 +93,21 @@ const Charity = () => {
             {/* Article links */}
             <div className="space-y-2">
               <a
-                href="https://qubit.hu/2022/07/22/van-koztuk-aki-a-sajat-nevet-sem-ismeri-fel-leirva-de-mar-robotot-programoznak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
-              >
-                📰 Qubit.hu – „Van köztük, aki a saját nevét sem ismeri fel leírva, de már robotot programoznak"
-                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
-              </a>
-              <a
                 href="https://wmn.hu/ugy/58074-az-oroszoknak-tul-ukranok-vagyunk-az-ukranoknak-tul-magyarok-a-magyaroknak-tul-ciganyok--civil-akcioban-segiti-egy-maltai-alapitvany-az-ukran-menekult"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
               >
                 📰 WMN.hu – „Az oroszoknak túl ukránok vagyunk..."
+                <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
+              </a>
+              <a
+                href="https://qubit.hu/2022/07/22/van-koztuk-aki-a-sajat-nevet-sem-ismeri-fel-leirva-de-mar-robotot-programoznak"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
+              >
+                📰 Qubit.hu – „Van köztük, aki a saját nevét sem ismeri fel leírva, de már robotot programoznak"
                 <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
               </a>
             </div>

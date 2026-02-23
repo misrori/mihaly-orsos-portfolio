@@ -79,7 +79,7 @@ const translations: Record<Language, Record<string, string>> = {
     "charity.title": "Jótékonyság",
     "charity.feny.name": "Fényhúzók Alapítvány",
     "charity.feny.desc": "Napenergiával világítunk olyan hátrányos helyzetű településeken lévő házakban, ahol egyáltalán nincs áram.",
-    "charity.feny.link": "fényhúzókalapítvány.hu",
+    "charity.feny.link": "fenyhozokalapitvany.hu",
     "charity.ukraine.name": "Ukrán menekült gyerekek oktatása",
     "charity.ukraine.desc": "Programozás és technológia oktatása ukrán menekült gyerekeknek Magyarországon.",
 
@@ -170,7 +170,7 @@ const translations: Record<Language, Record<string, string>> = {
     "charity.title": "Charity",
     "charity.feny.name": "Fényhúzók Foundation",
     "charity.feny.desc": "Bringing solar-powered lighting to homes in disadvantaged communities with no electricity.",
-    "charity.feny.link": "fényhúzókalapítvány.hu",
+    "charity.feny.link": "fenyhozokalapitvany.hu",
     "charity.ukraine.name": "Teaching Ukrainian Refugee Children",
     "charity.ukraine.desc": "Programming and technology education for Ukrainian refugee children in Hungary.",
 
