@@ -59,13 +59,15 @@ const About = () => {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <h3 className="mb-6 text-xl font-semibold text-foreground">{t("edu.title")}</h3>
-          <div className="space-y-3">
-            <div className="rounded-lg border border-border bg-card px-5 py-4 text-sm text-secondary-foreground">
-              🎓 {t("edu.ceu")}
+          <h3 className="mb-6 text-2xl font-bold text-foreground">{t("edu.title")}</h3>
+          <div className="space-y-4">
+            <div className="card-hover rounded-xl border border-border bg-card px-6 py-5">
+              <p className="text-lg font-semibold text-foreground">🎓 Master of Business Analytics</p>
+              <p className="mt-1 text-base text-secondary-foreground">Central European University (2015-2016)</p>
             </div>
-            <div className="rounded-lg border border-border bg-card px-5 py-4 text-sm text-secondary-foreground">
-              🎓 {t("edu.pte")}
+            <div className="card-hover rounded-xl border border-border bg-card px-6 py-5">
+              <p className="text-lg font-semibold text-foreground">🎓 {t("edu.pte").split(" - ")[0]}</p>
+              <p className="mt-1 text-base text-secondary-foreground">{t("edu.pte").split(" - ")[1]}</p>
             </div>
           </div>
         </motion.div>

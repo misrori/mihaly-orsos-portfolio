@@ -42,7 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     "exp.databricks.desc": "Databricks alapú Data Engineering és Python oktatás tartása. Apache Spark, elosztott adatfeldolgozás és analitikai munkafolyamatok tanítása valós használati esetekkel.",
     "exp.mnb.role": "Kriptoeszköz szakértő",
     "exp.mnb.company": "Magyar Nemzeti Bank",
-    "exp.mnb.period": "2024 (6 hónap)",
+    "exp.mnb.period": "2024",
     "exp.mnb.desc": "Kriptoeszközökkel kapcsolatos szakmai segítségnyújtás jogászoknak. Szabályozási kérdések elemzése és technikai konzultáció.",
     "exp.ceu.role": "Előadó & IT fejlesztő",
     "exp.ceu.company": "Central European University",
@@ -63,6 +63,10 @@ const translations: Record<Language, Record<string, string>> = {
     "proj.quiz.desc": "Kahoot-szerű online kvíz alkalmazás, amely interaktív, valós idejű kvízeket tesz lehetővé oktatási és szórakoztatási célokra.",
     "proj.news.name": "News.goldhand.space",
     "proj.news.desc": "Személyre szabott hírösszefoglaló platform. Állítsd be a figyelni kívánt tartalmakat, és az AI összefoglalót küld neked.",
+    "proj.youtube.name": "Gold and Finance YouTube",
+    "proj.youtube.desc": "YouTube csatorna a pénzügyi piacokról, tőzsdei stratégiákról, kriptovalutákról és algoritmikus kereskedésről.",
+    "proj.podcast.name": "Blockchain Stories Podcast",
+    "proj.podcast.desc": "Spotify podcast sorozat a blockchain technológiáról, kriptovalutákról és a decentralizált pénzügyi világ történeteiről.",
 
     // Teaching
     "teach.title": "Oktatás",
@@ -86,7 +90,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Contact
     "contact.title": "Kapcsolat",
-    "contact.email": "ormraat.pte@gmail.com",
+    "contact.email": "goldhand@goldhand.space",
 
     // Footer
     "footer.rights": "Minden jog fenntartva.",
@@ -98,10 +102,12 @@ const translations: Record<Language, Record<string, string>> = {
     "intro.slide2.item1": "🤖 Van egy tőzsdei robotom, ami több pénzt veszít, mint amennyit nyer",
     "intro.slide2.item2": "📈 Nagy fanatikusa vagyok a kriptónak és a részvényeknek",
     "intro.slide2.item3": "🏄 Imádom a vízisportokat — wing foil, surf és minden, ami víz",
+    "intro.slide2.item4": "🎬 Van egy YouTube csatornám: Gold and Finance",
     "intro.slide3.title": "Amit csinálok",
     "intro.slide3.item1": "🎓 Databricks Certified Instructor",
     "intro.slide3.item2": "💻 Data Scientist & fejlesztő",
     "intro.slide3.item3": "🌍 Jótékonysági projektek — napenergia hátrányos helyzetűeknek",
+    "intro.slide3.item4": "🤖 AI evangelista — mindenhol azt tanítom, hogyan használjuk a mesterséges intelligenciát, mert képes vagy rá!",
   },
   en: {
     "nav.about": "About",
@@ -130,7 +136,7 @@ const translations: Record<Language, Record<string, string>> = {
     "exp.databricks.desc": "Delivering Databricks-based Data Engineering and Python training. Teaching Apache Spark, distributed data processing, and analytics workflows with real-world use cases.",
     "exp.mnb.role": "Crypto Asset Specialist",
     "exp.mnb.company": "Hungarian National Bank (MNB)",
-    "exp.mnb.period": "2024 (6 months)",
+    "exp.mnb.period": "2024",
     "exp.mnb.desc": "Provided technical expertise on crypto assets to legal professionals. Analysis of regulatory questions and technical consultation.",
     "exp.ceu.role": "Lecturer & IT Developer",
     "exp.ceu.company": "Central European University",
@@ -150,6 +156,10 @@ const translations: Record<Language, Record<string, string>> = {
     "proj.quiz.desc": "Kahoot-like online quiz application enabling interactive, real-time quizzes for educational and entertainment purposes.",
     "proj.news.name": "News.goldhand.space",
     "proj.news.desc": "Personalized news summary platform. Set up the content you want to follow, and AI sends you curated summaries.",
+    "proj.youtube.name": "Gold and Finance YouTube",
+    "proj.youtube.desc": "YouTube channel about financial markets, trading strategies, cryptocurrencies, and algorithmic trading.",
+    "proj.podcast.name": "Blockchain Stories Podcast",
+    "proj.podcast.desc": "Spotify podcast series about blockchain technology, cryptocurrencies, and stories from the decentralized finance world.",
 
     "teach.title": "Teaching",
     "teach.databricks.name": "Databricks Certified Instructor",
@@ -169,7 +179,7 @@ const translations: Record<Language, Record<string, string>> = {
     "edu.pte": "BSc in Physics - University of Pécs (2009-2012)",
 
     "contact.title": "Contact",
-    "contact.email": "ormraat.pte@gmail.com",
+    "contact.email": "goldhand@goldhand.space",
 
     "footer.rights": "All rights reserved.",
 
@@ -179,10 +189,12 @@ const translations: Record<Language, Record<string, string>> = {
     "intro.slide2.item1": "🤖 I have a trading bot that loses more money than it makes",
     "intro.slide2.item2": "📈 I'm a huge fan of crypto and stocks",
     "intro.slide2.item3": "🏄 I love water sports — wing foiling, surfing, everything water",
+    "intro.slide2.item4": "🎬 I have a YouTube channel: Gold and Finance",
     "intro.slide3.title": "What I do",
     "intro.slide3.item1": "🎓 Databricks Certified Instructor",
     "intro.slide3.item2": "💻 Data Scientist & Developer",
     "intro.slide3.item3": "🌍 Charity projects — solar energy for the disadvantaged",
+    "intro.slide3.item4": "🤖 AI evangelist — I teach everyone how to use AI, because you CAN do amazing things with it!",
   },
 };
 
