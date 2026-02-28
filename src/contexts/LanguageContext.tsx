@@ -63,7 +63,7 @@ const translations: Record<Language, Record<string, string>> = {
     "proj.quiz.desc": "Kahoot-szerű online kvíz alkalmazás, amely interaktív, valós idejű kvízeket tesz lehetővé oktatási és szórakoztatási célokra.",
     "proj.news.name": "News.goldhand.space",
     "proj.news.desc": "Személyre szabott hírösszefoglaló platform. Állítsd be a figyelni kívánt tartalmakat, és az AI összefoglalót küld neked.",
-    "proj.youtube.name": "Gold and Finance YouTube",
+    "proj.youtube.name": "Goldhand Finance YouTube",
     "proj.youtube.desc": "YouTube csatorna a pénzügyi piacokról, tőzsdei stratégiákról, kriptovalutákról és algoritmikus kereskedésről.",
     "proj.podcast.name": "Blockchain Stories Podcast",
     "proj.podcast.desc": "Spotify podcast sorozat a blockchain technológiáról, kriptovalutákról és a decentralizált pénzügyi világ történeteiről.",
@@ -77,7 +77,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Charity
     "charity.title": "Jótékonyság",
-    "charity.feny.name": "Fényhúzók Alapítvány",
+    "charity.feny.name": "Fényhozók Alapítvány",
     "charity.feny.desc": "Napenergiával világítunk olyan hátrányos helyzetű településeken lévő házakban, ahol egyáltalán nincs áram.",
     "charity.feny.link": "fenyhozokalapitvany.hu",
     "charity.ukraine.name": "Ukrán menekült gyerekek oktatása",
@@ -156,7 +156,7 @@ const translations: Record<Language, Record<string, string>> = {
     "proj.quiz.desc": "Kahoot-like online quiz application enabling interactive, real-time quizzes for educational and entertainment purposes.",
     "proj.news.name": "News.goldhand.space",
     "proj.news.desc": "Personalized news summary platform. Set up the content you want to follow, and AI sends you curated summaries.",
-    "proj.youtube.name": "Gold and Finance YouTube",
+    "proj.youtube.name": "Goldhand Finance YouTube",
     "proj.youtube.desc": "YouTube channel about financial markets, trading strategies, cryptocurrencies, and algorithmic trading.",
     "proj.podcast.name": "Blockchain Stories Podcast",
     "proj.podcast.desc": "Spotify podcast series about blockchain technology, cryptocurrencies, and stories from the decentralized finance world.",
@@ -168,7 +168,7 @@ const translations: Record<Language, Record<string, string>> = {
     "teach.ceu.desc": "Teaching programming, web scraping, APIs, and data extraction techniques at Central European University.",
 
     "charity.title": "Charity",
-    "charity.feny.name": "Fényhúzók Foundation",
+    "charity.feny.name": "Fényhozók Foundation",
     "charity.feny.desc": "Bringing solar-powered lighting to homes in disadvantaged communities with no electricity.",
     "charity.feny.link": "fenyhozokalapitvany.hu",
     "charity.ukraine.name": "Teaching Ukrainian Refugee Children",

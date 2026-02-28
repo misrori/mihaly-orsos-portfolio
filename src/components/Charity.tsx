@@ -49,7 +49,7 @@ const Charity = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
               >
-                🎥 Fényhúzók – Bemutatóvideó
+                🎥 Fényhozók – Bemutatóvideó
                 <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
               </a>
               <a
@@ -58,7 +58,7 @@ const Charity = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
               >
-                🎥 Fényhúzók – Videó 2
+                🎥 Fényhozók – Videó 2
                 <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
               </a>
               <a
@@ -67,7 +67,7 @@ const Charity = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground transition-colors hover:border-primary/40"
               >
-                🎥 Fényhúzók – Videó 3
+                🎥 Fényhozók – Videó 3
                 <ExternalLink size={14} className="shrink-0 text-muted-foreground" />
               </a>
             </div>
