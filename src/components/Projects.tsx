@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { ExternalLink, TrendingUp, Plane, HelpCircle, Newspaper, Youtube, Podcast } from "lucide-react";
+import { ExternalLink, TrendingUp, Plane, HelpCircle, Newspaper, Youtube, Podcast, Sparkles } from "lucide-react";
 
 const Projects = () => {
   const { t } = useLanguage();
 
   const projects = [
     { key: "goldhand", icon: TrendingUp, url: "https://goldhand.space", tag: "Trading & Analytics" },
+    { key: "ai-academy", icon: Sparkles, url: "https://ai.goldhand.space", tag: "AI & Education" },
     { key: "felhok", icon: Plane, url: "https://felhok.hu", tag: "Travel" },
     { key: "quiz", icon: HelpCircle, url: "https://quiz.goldhand.space", tag: "Education" },
     { key: "news", icon: Newspaper, url: "https://news.goldhand.space", tag: "AI & News" },
