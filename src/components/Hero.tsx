@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowDown, Github, Linkedin, Mail, ChevronRight } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -20,9 +19,9 @@ const Hero = () => {
             className="mb-8"
           >
             <img
-              src={profilePhoto}
+              src="/misi_no_bg.png"
               alt="Mihály Orsós"
-              className="relative h-64 w-auto object-contain drop-shadow-2xl sm:h-80 lg:h-96"
+              className="relative h-56 w-auto object-contain drop-shadow-2xl sm:h-72 lg:h-80"
             />
           </motion.div>
 
