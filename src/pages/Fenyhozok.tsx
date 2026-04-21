@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Sun, BatteryFull, Zap, Lightbulb, Download, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sun, BatteryFull, Zap, Lightbulb, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 type Lang = "hu" | "en";
@@ -80,13 +80,6 @@ const slides_t = {
     s8_c2_desc: "Elavult épületek, rossz szigetelés, korszerűtlen fűtésrendszer",
     s8_c3_title: "Alacsony jövedelem",
     s8_c3_desc: "A családok nem tudják fizetni a rezsit és a megélhetésüket is",
-    // Stats
-    s9_title: "A számok",
-    s9_sub: "Magyarországi energiaszegénység alakulása",
-    s9_y1: "2014", s9_v1: "21%", s9_d1: "~800 ezer háztartás",
-    s9_y2: "2022", s9_v2: "4.7%", s9_d2: "~180 ezer háztartás",
-    s9_y3: "2023", s9_v3: "7.2%", s9_d3: "~700 ezer ember",
-    s9_note: "A trend javuló, de százezrek vannak még veszélyben.",
     // Who affected
     s10_title: "Kiket érint leginkább?",
     s10_c1: "Vidéki családok", s10_c1d: "Rosszul szigetelt önálló családi házakban élő, alacsony jövedelmű családok",
@@ -95,9 +88,9 @@ const slides_t = {
     s10_c4: "54–60% nem számít szegénynek", s10_c4d: "Papíron nem jövedelmi szegény, mégis nem tudják fizetni a fűtést",
     // Why persists
     s11_title: "Miért marad fenn a probléma?",
-    s11_p1: "Változékony energiaárak és stagnáló jövedelmek",
-    s11_p2: "A rezsicsökkentés nem ösztönözte a takarékoskodást: 2013–2021 között +34% energiafogyasztás",
-    s11_p3: "Elavult épületek, korszerűtlen kályhák, fatüzelés-függőség",
+    s11_p1: "A tűzifa ára nem volt része a rezsicsökkentésnek, a többszörösére nőtt, miközben a legszegényebbek közel fele ezzel fűt.",
+    s11_p2: "Magyarország a válság alatt egyedüliként részben feloldotta a rezsicsökkentést, miközben más országok ekkor vezették be → nőtt a tűzifa iránti kereslet, tovább emelve az árakat.",
+    s11_p3: "A szegények majd fele (~40%) fűt fával, különösen szegregátumokban és kistelepüléseken, ahol nincs gáz/távfűtés. Rájuk nem vonatkozik a védendő fogyasztó státus.",
     s11_p4: "Az energiaszegénység az energiaköltségek, alacsony jövedelem és rossz háztartási energiahatékonyság kombinációja (EU Bizottság)",
     // Impact
     s12_title: "Hatás az emberekre",
@@ -111,17 +104,22 @@ const slides_t = {
     s14_c1: "Állami eszközök", s14_c1d: "Rezsicsökkentés, szociális juttatások, tűzifa-programok rövid távú védelmet nyújtanak",
     s14_c2: "Civil szervezetek", s14_c2d: "Célzott segítségnyújtás: házlátogatás, energiatanácsadás, kis felújítási csomagok",
     s14_c3: "Partnerségi modell", s14_c3d: "A legjobb eredmények az önkormányzatok, NGO-k és támogatók együttműködéséből születnek",
+    // What is the problem
+    s14b_title: "Mi a probléma?",
+    s14b_gov: "Állami programok",
+    s14b_gov_items: "A rezsicsökkentés univerzális → a magasabb jövedelműek többet nyernek (nagyobb fogyasztás) | Nem terjed ki a tűzifára | Tűzifaprogram: igazságtalan elosztás, gyakran rossz minőség, nem univerzális",
+    s14b_long: "Hosszú táv",
+    s14b_long_items: "Az épületfelújítás megoldás lenne, de előfinanszírozást igényel | Csak részben fedezi a költségeket | Feltételek (stabil munkaviszony, adósságmentesség) kizárják a legszegényebbeket | Nincs program szubstandard lakásokra (víz/csatorna hiánya, beázás, repedések, vizesedés)",
+    s14b_civil: "Civil szervezetek",
+    s14b_civil_items: "Jó gyakorlatok, de nem skálázhatók; nem épülnek be országos programokba",
+    s14b_fin: "Finanszírozás",
+    s14b_fin_items: "Energiaközösségi szabályozás és támogatás nem hozzáférhető kisebb kezdeményezéseknek (pl. Fényhozók)",
     // Recommendations
     s15_title: "Javaslatok",
     s15_short: "Rövid táv", s15_short_items: "Célzott vészhelyzeti támogatás | Tartozáskezelés | Helyi energiatanácsadás",
     s15_long: "Hosszú táv", s15_long_items: "Épületfelújítás (szigetelés, nyílászárócsere, fűtéskorszerűsítés) | Szociális célzás",
-    s15_fin: "Finanszírozás", s15_fin_items: "Vegyes támogatások | Megfizethető zöld hitelek | Közösségi pilot projektek",
+    s15_fin: "Finanszírozás", s15_fin_items: "Vegyes támogatások | Megfizethető zöld hitelek | Közösségi pilot projektek | A legszegényebbeknek 100% előfinanszírozás",
     s15_principle: "Alapelv: A válságkezelés helyett kapacitásépítés, hogy a háztartások ellenállóképesek maradjanak.",
-    // Study
-    s16_title: "Tanulmány letöltés",
-    s16_desc: "A magyarországi energiaszegénységről készült részletes tanulmány letölthető magyar és angol nyelven.",
-    s16_hu: "Magyar változat (PDF)",
-    s16_en: "Angol változat (PDF)",
   },
   en: {
     s0_title: "Fényhozók Foundation",
@@ -142,21 +140,15 @@ const slides_t = {
     s8_c2_desc: "Outdated buildings, poor insulation, non-modern heating systems",
     s8_c3_title: "Low income",
     s8_c3_desc: "Families cannot pay utilities and cover basic living costs",
-    s9_title: "The numbers",
-    s9_sub: "Energy poverty trends in Hungary",
-    s9_y1: "2014", s9_v1: "21%", s9_d1: "~800,000 households",
-    s9_y2: "2022", s9_v2: "4.7%", s9_d2: "~180,000 households",
-    s9_y3: "2023", s9_v3: "7.2%", s9_d3: "~700,000 people",
-    s9_note: "The trend shows improvement, but hundreds of thousands remain at risk.",
     s10_title: "Who is most affected?",
     s10_c1: "Rural families", s10_c1d: "Low-income families in poorly insulated detached houses",
     s10_c2: "Northeast Hungary", s10_c2d: "Small settlements where poor buildings and wood heating dominate",
     s10_c3: "Large families, single parents", s10_c3d: "Higher-than-average heating and comfort deficiency",
     s10_c4: "54–60% not classified as poor", s10_c4d: "Not income-poor on paper, yet cannot afford heating",
     s11_title: "Why the problem persists",
-    s11_p1: "Volatile energy prices and stagnating incomes",
-    s11_p2: "Utility cost reduction didn't incentivize savings: +34% energy consumption 2013–2021",
-    s11_p3: "Aging buildings, outdated stoves, firewood dependence",
+    s11_p1: "Firewood prices were excluded from the utility cost reduction scheme and have multiplied, while nearly half of the poorest households heat with wood.",
+    s11_p2: "Hungary uniquely partially rolled back the utility cost reduction during the energy crisis, while other countries introduced similar schemes — driving up firewood demand and prices further.",
+    s11_p3: "Nearly half (~40%) of the poor heat with wood, especially in segregated settlements and small villages without gas or district heating. They are not covered by the protected consumer status.",
     s11_p4: "Energy poverty is the combination of energy costs, low income, and poor household energy efficiency (EU Commission)",
     s12_title: "Human impact",
     s12_c1: "Health damage", s12_c1d: "Respiratory diseases, wet firewood and plastic burning, circulatory problems",
@@ -167,15 +159,21 @@ const slides_t = {
     s14_c1: "Government tools", s14_c1d: "Utility cost reduction, social benefits, firewood programs provide short-term protection",
     s14_c2: "Civil organizations", s14_c2d: "Targeted outreach: home visits, energy counseling, small retrofit kits",
     s14_c3: "Partnership model", s14_c3d: "Best results come from municipalities, NGOs, and donors working together",
+    // What is the problem
+    s14b_title: "What is the problem?",
+    s14b_gov: "Government programs",
+    s14b_gov_items: "Utility cost reduction is universal → higher-income households benefit more (larger consumption) | Does not cover firewood | Firewood program: unfair distribution, often poor quality, not universal",
+    s14b_long: "Long term",
+    s14b_long_items: "Building renovation would be a solution but requires upfront financing | Only partially covers costs | Conditions (stable employment, debt-free status) exclude the poorest | No program for substandard housing (lack of water/sewage, leaks, cracks, dampness)",
+    s14b_civil: "Civil organizations",
+    s14b_civil_items: "Good practices, but not scalable; not integrated into national programs",
+    s14b_fin: "Financing",
+    s14b_fin_items: "Community energy regulations and subsidies are not accessible to smaller initiatives (e.g. Fényhozók)",
     s15_title: "Recommendations",
     s15_short: "Short term", s15_short_items: "Targeted emergency support | Arrears management | Local energy coaching",
     s15_long: "Long term", s15_long_items: "Building renovation (insulation, windows, heating upgrades) | Social targeting",
-    s15_fin: "Financing", s15_fin_items: "Blended grants | Affordable green loans | Community pilot projects",
+    s15_fin: "Financing", s15_fin_items: "Blended grants | Affordable green loans | Community pilot projects | 100% upfront financing for the poorest",
     s15_principle: "Core principle: Move from crisis relief to capacity building so households can stay resilient.",
-    s16_title: "Download the study",
-    s16_desc: "The detailed study on energy poverty in Hungary is available in Hungarian and English.",
-    s16_hu: "Hungarian version (PDF)",
-    s16_en: "English version (PDF)",
   },
 };
 
@@ -402,28 +400,6 @@ const Fenyhozok = () => {
         </div>
       ),
     },
-    // 9 - Statistics
-    {
-      title: t.s9_title,
-      content: (
-        <div className="flex flex-col items-center gap-6">
-          <p className="text-base text-muted-foreground sm:text-lg">{t.s9_sub}</p>
-          <div className="grid w-full max-w-4xl gap-4 sm:grid-cols-3">
-            <StatBlock year={t.s9_y1} value={t.s9_v1} desc={t.s9_d1} delay={0.2} />
-            <StatBlock year={t.s9_y2} value={t.s9_v2} desc={t.s9_d2} delay={0.5} />
-            <StatBlock year={t.s9_y3} value={t.s9_v3} desc={t.s9_d3} delay={0.8} />
-          </div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="max-w-2xl text-center text-sm text-muted-foreground sm:text-base"
-          >
-            {t.s9_note}
-          </motion.p>
-        </div>
-      ),
-    },
     // 10 - Who affected
     {
       title: t.s10_title,
@@ -507,6 +483,35 @@ const Fenyhozok = () => {
         </div>
       ),
     },
+    // 14b - What is the problem
+    {
+      title: t.s14b_title,
+      content: (
+        <div className="flex w-full max-w-4xl flex-col gap-4">
+          {[
+            { label: t.s14b_gov, items: t.s14b_gov_items, color: "border-red-400/50 bg-red-400/5" },
+            { label: t.s14b_long, items: t.s14b_long_items, color: "border-orange-400/50 bg-orange-400/5" },
+            { label: t.s14b_civil, items: t.s14b_civil_items, color: "border-purple-400/50 bg-purple-400/5" },
+            { label: t.s14b_fin, items: t.s14b_fin_items, color: "border-yellow-400/50 bg-yellow-400/5" },
+          ].map((row, i) => (
+            <motion.div
+              key={row.label}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.25, duration: 0.4 }}
+              className={`rounded-xl border-2 p-4 text-left sm:p-5 ${row.color}`}
+            >
+              <h3 className="mb-2 text-lg font-bold text-foreground sm:text-xl">{row.label}</h3>
+              <div className="flex flex-wrap gap-2">
+                {row.items.split(" | ").map((item) => (
+                  <span key={item} className="rounded-lg bg-background/80 px-3 py-1 text-sm text-secondary-foreground sm:text-base">{item}</span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      ),
+    },
     // 15 - Recommendations
     {
       title: t.s15_title,
@@ -540,33 +545,6 @@ const Fenyhozok = () => {
           >
             {t.s15_principle}
           </motion.p>
-        </div>
-      ),
-    },
-    // 16 - Study download
-    {
-      title: t.s16_title,
-      content: (
-        <div className="flex flex-col items-center gap-6">
-          <p className="max-w-2xl text-center text-base text-muted-foreground sm:text-lg">{t.s16_desc}</p>
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <a
-              href="/energy_poverty_hungary_hu.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border-2 border-primary/30 bg-primary/5 px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/60 hover:bg-primary/10 sm:text-lg"
-            >
-              <Download className="h-5 w-5 text-primary" /> {t.s16_hu}
-            </a>
-            <a
-              href="/energy_poverty_hungary.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border-2 border-blue-400/30 bg-blue-400/5 px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-blue-400/60 hover:bg-blue-400/10 sm:text-lg"
-            >
-              <Download className="h-5 w-5 text-blue-400" /> {t.s16_en}
-            </a>
-          </div>
         </div>
       ),
     },
